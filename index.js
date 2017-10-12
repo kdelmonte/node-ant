@@ -60,7 +60,7 @@ function exec(tasks, options, callback) {
         } else {
             // Let's hope that ant is in the user's PATH
             var cmd = ['ant', '-buildfile', tmpFile].concat(options.args);
-            _childProcess.exec(cmd, processCallback);
+            _childProcess.exec(cmd.join(' '), processCallback);
         }
     });
 }
